@@ -1,0 +1,639 @@
+<!--
+~ Copyright (c) 2016 WSO2 Inc. (http://wso2.com) All Rights Reserved.
+~
+~ Licensed under the Apache License, Version 2.0 (the "License");
+~ you may not use this file except in compliance with the License.
+~ You may obtain a copy of the License at
+~
+~  http://www.apache.org/licenses/LICENSE-2.0
+~
+~ Unless required by applicable law or agreed to in writing, software
+~ distributed under the License is distributed on an "AS IS" BASIS,
+~ WITHOUT WARRANTIES OR CONDITIONS OF ANY KIND, either express or implied.
+~ See the License for the specific language governing permissions and
+~ limitations under the License.
+-->
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+
+    <title>WSO2 APP Store</title>
+
+    <link rel="shortcut icon" href="libs/theme-wso2_1.0/images/favicon.png" />
+
+    <!-- Bootstrap CSS -->
+    <link href="libs/bootstrap_3.3.5/css/bootstrap.min.css" rel="stylesheet" type="text/css" />
+
+    <!-- Font WSO2 CSS -->
+    <link href="libs/font-wso2_1.0.0/css/font-wso2.min.css" rel="stylesheet" type="text/css" />
+
+    <!-- Theme WSO2 CSS -->
+    <link href="libs/theme-wso2_1.0/css/theme-wso2.css" rel="stylesheet" type="text/css" />
+
+    <!-- Custom CSS -->
+    <link href="css/appm-main-styles.css" rel="stylesheet" type="text/css" />
+    <link href="css/appm-left-column-styles.css" rel="stylesheet" type="text/css" />
+
+    <!-- HTML5 shim and Respond.js for IE8 support of HTML5 elements and media queries -->
+    <!-- WARNING: Respond.js doesn't work if you view the page via file:// -->
+    <!--[if lt IE 9]>
+    <script src="libs/html5shiv_3.7.2/html5shiv.min.js"></script>
+    <script src="libs/respond_1.4.2/respond.min.js"></script>
+    <![endif]-->
+
+</head>
+<body>
+
+<!-- header -->
+<header class="header header-default">
+    <div class="container-fluid">
+        <div class="brand pull-left float-remove-xs text-center-xs">
+            <a href="#">
+                <img src="libs/theme-wso2_1.0/images/logo-inverse.svg" alt="apps-store" title="apps-store"
+                     class="logo" />
+
+                <h1 class="display-block-xs">APP Store</h1>
+            </a>
+        </div>
+        <div class="auth remove-margin-right pull-right float-remove-xs text-center-xs">
+            <a href="#" class="header-action">
+                <span class="icon"><i class="fw fw-sign-up add-padding-right-1x"></i></span>
+                <span class="text-uppercase">register</span>
+            </a>
+            <a href="#" class="header-action">
+                <span class="icon"><i class="glyphicon glyphicon-off add-padding-right-1x"></i></span>
+                <span class="text-uppercase">login</span>
+            </a>
+        </div>
+    </div>
+</header>
+
+<!-- navbar -->
+<nav class="navbar navbar-default navbar-dark" data-spy="affix" data-offset-top="50" data-offset-bottom="40">
+    <div class="container-fluid">
+        <div class="navbar-header">
+            <ul class="nav navbar-nav">
+                <li class="dropdown">
+                    <a href="#" class="dropdown-toggle" data-toggle="dropdown" role="button" aria-expanded="false">
+                        <i class="fw fw-organization add-margin-right-1x"></i> Store abc.com <span class="caret"></span>
+                    </a>
+                    <ul class="dropdown-menu" role="menu">
+                        <li><a href="#">carbon.super</a></li>
+                        <li><a href="#">xyz.com</a></li>
+                        <li><a href="#">my.net</a></li>
+                    </ul>
+                </li>
+                <li>
+                    <a href="#">
+                        <span class="icon add-margin-right-1x"><i class="fw fw-web-app fw-lg"></i></span>Web Apps
+                    </a>
+                </li>
+                <li>
+                    <a href="#">
+                        <span class="icon add-margin-right-1x"><i class="fw fw-mobile fw-lg"></i></span>Mobile apps
+                    </a>
+                </li>
+                <li class="active">
+                    <a href="#">
+                        <span class="icon add-margin-right-1x"><i class="fw fw-globe fw-lg"></i></span>Sites
+                    </a>
+                </li>
+            </ul>
+        </div>
+    </div>
+</nav>
+
+<!-- #page-content-wrapper -->
+<div class="page-content-wrapper">
+
+    <!-- media-->
+    <div class="media">
+
+        <!-- media left-->
+        <div class="media-left">
+
+            <nav class="navigation">
+                <a href="#" class="active red">
+                    <span class="icon"><i class="fw fw-heart"></i></span>
+                    <span class="navigation-item hidden-xs hidden-sm">My Favorites</span>
+                </a>
+                <a href="#" class="purple">
+                    <span class="icon"><i class="fw fw-application"></i></span>
+                    <span class="navigation-item hidden-xs hidden-sm">My Apps</span>
+                </a>
+                <a href="#" class="blue">
+                    <span class="icon"><i class="fw fw-resource"></i></span>
+                    <span class="navigation-item hidden-xs hidden-sm">All Apps</span>
+                </a>
+            </nav>
+
+            <div class="tags-wrapper hidden-xs hidden-sm">
+                <div class="tag-title"> Tags</div>
+                <ul class="tag-content">
+                    <li>Business</li>
+                    <li>Comics</li>
+                    <li class="active">Communication</li>
+                    <li>Education</li>
+                    <li>Entertainment</li>
+                    <li>Finance</li>
+                    <li>Health & Fitness</li>
+                    <li>Media & Video</li>
+                    <li>Medical</li>
+                    <li>Music & Audio</li>
+                    <li>Shopping</li>
+                    <li>Social</li>
+                    <li>Sports</li>
+                    <li>Travel & Local</li>
+                    <li>Widgets</li>
+                    <div class="tag-more">more..</div>
+                </ul>
+            </div>
+
+        </div>
+
+        <!-- media body-->
+        <div class="media-body">
+            <!-- navbar -->
+            <div class="navbar-wrapper">
+                <nav class="navbar navbar-default">
+                    <div class="col-xs-12 col-sm-12 col-md-12 col-lg-6">
+                        <div class="search-box input-group">
+                            <input type="text" class="search-field form-control" placeholder="Search..." />
+
+                            <div class="input-group-btn">
+                                <button class="search-btn form-control-btn" type="button" title="Search">
+                                    <i class="fw fw-search" aria-hidden="true"></i>
+                                </button>
+                            </div>
+                            <span class="search-category input-group-addon">
+                                <select>
+                                    <option selected="selected" value="name">By Name</option>
+                                    <option value="provider">By Provider</option>
+                                </select>
+                            </span>
+                        </div>
+                    </div>
+                </nav>
+            </div>
+
+            <!-- page content -->
+            <div class="container-fluid body-wrapper">
+
+                <div class="page-header">
+                    <div class="pull-left hidden-xs">
+                        <h3 class="page-title">Sites</h3>
+                    </div>
+                    <div class="sorting-options pull-right float-remove-xs text-center-xs">
+                        <div class="btn-group" role="group">
+                            <a href="#" class="btn btn-default"><i class="fw fw-star"></i></a>
+                            <a href="#" class="btn btn-default"><i class="fw fw-list-sort"></i></a>
+                            <a href="#" class="btn btn-default"><i class="fw fw-calendar"></i></a>
+                            <a href="#" class="btn btn-default"><i class="fw fw-statistics"></i></a>
+                        </div>
+                    </div>
+                </div>
+                <div class="page-content">
+                    <div class="row">
+                        <!--app tiles-->
+                        <div class="col-xs-12 col-sm-4 col-md-3 col-lg-2">
+                            <div class="app-tile">
+                                <a href="/app/id">
+                                    <div class="app-tile-thumbnail">
+                                        <div class="thumbnail-ribbon favorite-ribbon
+                                        col-xs-offset-1 col-sm-offset-1 col-md-offset-1 col-lg-offset-1
+                                        col-xs-1 col-sm-2 col-md-2 col-lg-2">
+                                            <span class="text-center-force"><i class="fw fw-heart"></i></span>
+                                        </div>
+                                        <div class="thumbnail-image">
+                                            <img src="images/app-1.jpg">
+                                        </div>
+
+                                        <div class="thumbnail-overlay">
+                                            <span class="fw-stack">
+                                                <i class="fw fw-circle-outline fw-stack-2x"></i>
+                                                <i class="fw fw-view fw-stack-1x"></i>
+                                            </span>
+                                        </div>
+                                    </div>
+                                </a>
+
+                                <div class="app-tile-details">
+                                    <h4>Project Name</h4>
+                                    <h5>v1.0.0</h5>
+
+                                    <p>Admin</p>
+                                    <i class="fw fw-star"></i>
+                                    <i class="fw fw-star"></i>
+                                    <i class="fw fw-star"></i>
+                                    <i class="fw fw-star"></i>
+                                    <i class="fw fw-star"></i>
+
+                                    <div class="more-menu pull-right">
+                                        <a href="#" class="more-menu-btn dropdown-toggle" data-toggle="dropdown">
+                                            <i class="fw fw-ellipsis fw-rotate-90"></i>
+                                        </a>
+                                        <ul class="more-menu-items dropdown-menu">
+                                            <li><a href="#">Remove from Favorites</a></li>
+                                            <li><a href="#">More Details</a></li>
+                                        </ul>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="col-xs-12 col-sm-4 col-md-3 col-lg-2">
+                            <div class="app-tile">
+                                <a href="/app/id">
+                                    <div class="app-tile-thumbnail">
+                                        <div class="thumbnail-ribbon subscribe-ribbon
+                                        col-xs-offset-2 col-sm-offset-2 col-md-offset-1 col-lg-offset-1
+                                        col-xs-1 col-sm-2 col-md-2 col-lg-2">
+                                            <span class="text-center-force"><i class="fw fw-subscribe"></i></span>
+                                        </div>
+                                        <div class="thumbnail-image">
+                                            <img src="images/app-2.jpg">
+                                        </div>
+                                        <div class="thumbnail-overlay">
+                                            <span class="fw-stack fw-lg">
+                                                <i class="fw fw-circle-outline fw-stack-2x"></i>
+                                                <i class="fw fw-deploy fw-stack-1x"></i>
+                                            </span>
+                                        </div>
+                                    </div>
+                                </a>
+
+                                <div class="app-tile-details">
+                                    <h4>Project Name</h4>
+                                    <h5>v1.0.0</h5>
+
+                                    <p>Admin</p>
+                                    <i class="fw fw-star"></i>
+                                    <i class="fw fw-star"></i>
+                                    <i class="fw fw-star"></i>
+                                    <i class="fw fw-star"></i>
+                                    <i class="fw fw-star"></i>
+
+                                    <div class="more-menu pull-right">
+                                        <a href="#" class="more-menu-btn dropdown-toggle" data-toggle="dropdown">
+                                            <i class="fw fw-ellipsis fw-rotate-90"></i>
+                                        </a>
+                                        <ul class="more-menu-items dropdown-menu">
+                                            <li><a href="#">Add to Favorite</a></li>
+                                            <li><a href="#">More Details</a></li>
+                                        </ul>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="col-xs-12 col-sm-4 col-md-3 col-lg-2">
+                            <div class="app-tile">
+                                <a href="/app/id">
+                                    <div class="app-tile-thumbnail">
+                                        <div class="thumbnail-ribbon ad-ribbon
+                                        col-xs-offset-2 col-sm-offset-2 col-md-offset-1 col-lg-offset-1
+                                        col-xs-1 col-sm-2 col-md-2 col-lg-2">
+                                            <span class="text-center-force">Ad</span>
+                                        </div>
+                                        <div class="thumbnail-default" style="background-color: #d35400;">
+                                            <div class="text-center-force">Aw</div>
+                                        </div>
+
+                                        <div class="thumbnail-overlay">
+                                            <span class="fw-stack fw-lg">
+                                                <i class="fw fw-circle-outline fw-stack-2x"></i>
+                                                <i class="fw fw-info fw-stack-1x"></i>
+                                            </span>
+                                        </div>
+                                    </div>
+                                </a>
+
+                                <div class="app-tile-details">
+                                    <h4>Project Name</h4>
+                                    <h5>v1.0.0</h5>
+
+                                    <p>Admin</p>
+                                    <i class="fw fw-star"></i>
+                                    <i class="fw fw-star"></i>
+                                    <i class="fw fw-star"></i>
+                                    <i class="fw fw-star"></i>
+                                    <i class="fw fw-star"></i>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="col-xs-12 col-sm-4 col-md-3 col-lg-2">
+                            <div class="app-tile">
+                                <a href="/app/id">
+                                    <div class="app-tile-thumbnail">
+                                        <div class="thumbnail-image">
+                                            <img src="http://placehold.it/100x100.png">
+                                        </div>
+
+                                        <div class="thumbnail-overlay">
+                                            <span class="fw-stack fw-lg">
+                                                <i class="fw fw-circle-outline fw-stack-2x"></i>
+                                                <i class="fw fw-view fw-stack-1x"></i>
+                                            </span>
+                                        </div>
+                                    </div>
+                                </a>
+
+                                <div class="app-tile-details">
+                                    <h4><a href="#">Project Name</a></h4>
+                                    <h5><a href="#">v1.0.0</a></h5>
+
+                                    <p>Admin</p>
+                                    <i class="fw fw-star"></i>
+                                    <i class="fw fw-star"></i>
+                                    <i class="fw fw-star"></i>
+                                    <i class="fw fw-star"></i>
+                                    <i class="fw fw-star"></i>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="col-xs-12 col-sm-4 col-md-3 col-lg-2">
+                            <div class="app-tile">
+                                <a href="/app/id">
+                                    <div class="app-tile-thumbnail">
+                                        <div class="thumbnail-image">
+                                            <img src="http://placehold.it/200x200.png">
+                                        </div>
+
+                                        <div class="thumbnail-overlay">
+                                            <span class="fw-stack fw-lg">
+                                                <i class="fw fw-circle-outline fw-stack-2x"></i>
+                                                <i class="fw fw-view fw-stack-1x"></i>
+                                            </span>
+                                        </div>
+                                    </div>
+                                </a>
+
+                                <div class="app-tile-details">
+                                    <h4><a href="#">Project Name</a></h4>
+                                    <h5><a href="#">v1.0.0</a></h5>
+
+                                    <p>Admin</p>
+                                    <i class="fw fw-star"></i>
+                                    <i class="fw fw-star"></i>
+                                    <i class="fw fw-star"></i>
+                                    <i class="fw fw-star"></i>
+                                    <i class="fw fw-star"></i>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="col-xs-12 col-sm-4 col-md-3 col-lg-2">
+                            <div class="app-tile">
+                                <a href="/app/id">
+                                    <div class="app-tile-thumbnail">
+                                        <div class="thumbnail-image">
+                                            <img src="http://placehold.it/300x300.png">
+                                        </div>
+
+                                        <div class="thumbnail-overlay">
+                                            <span class="fw-stack fw-lg">
+                                                <i class="fw fw-circle-outline fw-stack-2x"></i>
+                                                <i class="fw fw-view fw-stack-1x"></i>
+                                            </span>
+                                        </div>
+                                    </div>
+                                </a>
+
+                                <div class="app-tile-details">
+                                    <h4><a href="#">Project Name</a></h4>
+                                    <h5><a href="#">v1.0.0</a></h5>
+
+                                    <p>Admin</p>
+                                    <i class="fw fw-star"></i>
+                                    <i class="fw fw-star"></i>
+                                    <i class="fw fw-star"></i>
+                                    <i class="fw fw-star"></i>
+                                    <i class="fw fw-star"></i>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="col-xs-12 col-sm-4 col-md-3 col-lg-2">
+                            <div class="app-tile">
+                                <a href="/app/id">
+                                    <div class="app-tile-thumbnail">
+                                        <div class="thumbnail-image">
+                                            <img src="http://placehold.it/400x400.png">
+                                        </div>
+
+                                        <div class="thumbnail-overlay">
+                                            <span class="fw-stack fw-lg">
+                                                <i class="fw fw-circle-outline fw-stack-2x"></i>
+                                                <i class="fw fw-view fw-stack-1x"></i>
+                                            </span>
+                                        </div>
+                                    </div>
+                                </a>
+
+                                <div class="app-tile-details">
+                                    <h4><a href="#">Project Name</a></h4>
+                                    <h5><a href="#">v1.0.0</a></h5>
+
+                                    <p>Admin</p>
+                                    <i class="fw fw-star"></i>
+                                    <i class="fw fw-star"></i>
+                                    <i class="fw fw-star"></i>
+                                    <i class="fw fw-star"></i>
+                                    <i class="fw fw-star"></i>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="col-xs-12 col-sm-4 col-md-3 col-lg-2">
+                            <div class="app-tile">
+                                <a href="/app/id">
+                                    <div class="app-tile-thumbnail">
+                                        <div class="thumbnail-image">
+                                            <img src="http://placehold.it/500x500.png">
+                                        </div>
+
+                                        <div class="thumbnail-overlay">
+                                            <span class="fw-stack fw-lg">
+                                                <i class="fw fw-circle-outline fw-stack-2x"></i>
+                                                <i class="fw fw-view fw-stack-1x"></i>
+                                            </span>
+                                        </div>
+                                    </div>
+                                </a>
+
+                                <div class="app-tile-details">
+                                    <h4><a href="#">Project Name</a></h4>
+                                    <h5><a href="#">v1.0.0</a></h5>
+
+                                    <p>Admin</p>
+                                    <i class="fw fw-star"></i>
+                                    <i class="fw fw-star"></i>
+                                    <i class="fw fw-star"></i>
+                                    <i class="fw fw-star"></i>
+                                    <i class="fw fw-star"></i>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="col-xs-12 col-sm-4 col-md-3 col-lg-2">
+                            <div class="app-tile">
+                                <a href="/app/id">
+                                    <div class="app-tile-thumbnail">
+                                        <div class="thumbnail-image">
+                                            <img src="http://placehold.it/150x350.png">
+                                        </div>
+
+                                        <div class="thumbnail-overlay">
+                                            <span class="fw-stack fw-lg">
+                                                <i class="fw fw-circle-outline fw-stack-2x"></i>
+                                                <i class="fw fw-view fw-stack-1x"></i>
+                                            </span>
+                                        </div>
+                                    </div>
+                                </a>
+
+                                <div class="app-tile-details">
+                                    <h4><a href="#">Project Name</a></h4>
+                                    <h5><a href="#">v1.0.0</a></h5>
+
+                                    <p>Admin</p>
+                                    <i class="fw fw-star"></i>
+                                    <i class="fw fw-star"></i>
+                                    <i class="fw fw-star"></i>
+                                    <i class="fw fw-star"></i>
+                                    <i class="fw fw-star"></i>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="col-xs-12 col-sm-4 col-md-3 col-lg-2">
+                            <div class="app-tile">
+                                <a href="/app/id">
+                                    <div class="app-tile-thumbnail">
+                                        <div class="thumbnail-image">
+                                            <img src="http://placehold.it/350x150.png">
+                                        </div>
+
+                                        <div class="thumbnail-overlay">
+                                            <span class="fw-stack fw-lg">
+                                                <i class="fw fw-circle-outline fw-stack-2x"></i>
+                                                <i class="fw fw-view fw-stack-1x"></i>
+                                            </span>
+                                        </div>
+                                    </div>
+                                </a>
+
+                                <div class="app-tile-details">
+                                    <h4><a href="#">Project Name</a></h4>
+                                    <h5><a href="#">v1.0.0</a></h5>
+
+                                    <p>Admin</p>
+                                    <i class="fw fw-star"></i>
+                                    <i class="fw fw-star"></i>
+                                    <i class="fw fw-star"></i>
+                                    <i class="fw fw-star"></i>
+                                    <i class="fw fw-star"></i>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="col-xs-12 col-sm-4 col-md-3 col-lg-2">
+                            <div class="app-tile">
+                                <a href="/app/id">
+                                    <div class="app-tile-thumbnail">
+                                        <div class="thumbnail-image">
+                                            <img src="http://placehold.it/400x300.png">
+                                        </div>
+
+                                        <div class="thumbnail-overlay">
+                                            <span class="fw-stack fw-lg">
+                                                <i class="fw fw-circle-outline fw-stack-2x"></i>
+                                                <i class="fw fw-view fw-stack-1x"></i>
+                                            </span>
+                                        </div>
+                                    </div>
+                                </a>
+
+                                <div class="app-tile-details">
+                                    <h4><a href="#">Project Name</a></h4>
+                                    <h5><a href="#">v1.0.0</a></h5>
+
+                                    <p>Admin</p>
+                                    <i class="fw fw-star"></i>
+                                    <i class="fw fw-star"></i>
+                                    <i class="fw fw-star"></i>
+                                    <i class="fw fw-star"></i>
+                                    <i class="fw fw-star"></i>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="col-xs-12 col-sm-4 col-md-3 col-lg-2">
+                            <div class="app-tile">
+                                <a href="/app/id">
+                                    <div class="app-tile-thumbnail">
+                                        <div class="thumbnail-image">
+                                            <img src="http://placehold.it/1024x768.png">
+                                        </div>
+
+                                        <div class="thumbnail-overlay">
+                                            <span class="fw-stack fw-lg">
+                                                <i class="fw fw-circle-outline fw-stack-2x"></i>
+                                                <i class="fw fw-view fw-stack-1x"></i>
+                                            </span>
+                                        </div>
+                                    </div>
+                                </a>
+
+                                <div class="app-tile-details">
+                                    <h4><a href="#">Project Name</a></h4>
+                                    <h5><a href="#">v1.0.0</a></h5>
+
+                                    <p>Admin</p>
+                                    <i class="fw fw-star"></i>
+                                    <i class="fw fw-star"></i>
+                                    <i class="fw fw-star"></i>
+                                    <i class="fw fw-star"></i>
+                                    <i class="fw fw-star"></i>
+                                </div>
+                            </div>
+                        </div>
+
+                    </div>
+                    <!-- pagination -->
+                    <div class="pull-right-lg pull-right-md text-center-sm text-center-xs add-padding-bottom-2x">
+                        <div class="btn-group" role="group">
+                            <a href="#" class="btn btn-default btn-lg disabled" title="Previous">
+                                <i class="fw fw-left fw-lg"></i>
+                            </a>
+                            <a href="#" class="btn btn-default btn-lg" title="Next">
+                                <i class="fw fw-right fw-lg"></i>
+                            </a>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>
+<!-- /#page-content-wrapper -->
+
+<!--Store content goes here-->
+
+<!-- footer -->
+<footer class="footer">
+    <div class="container-fluid">
+        <p>WSO2 App Manager v1.0.0 | &copy;
+            <script>document.write(new Date().getFullYear());</script>
+            <a href="http://wso2.com/" target="_blank"><i class="icon fw fw-wso2"></i> Inc</a>.
+        </p>
+    </div>
+</footer>
+
+<!-- Jquery/Jquery UI JS -->
+<script src="libs/jquery_1.11.0/jquery-1.11.3.min.js"></script>
+
+<!-- Bootstrap JS -->
+<script src="libs/bootstrap_3.3.5/js/bootstrap.min.js"></script>
+
+<!-- Theme WSO2 JS -->
+<script src="libs/theme-wso2_1.0/js/theme-wso2.js"></script>
+
+</body>
+</html>

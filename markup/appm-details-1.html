@@ -1,0 +1,344 @@
+<!--
+~ Copyright (c) 2016 WSO2 Inc. (http://wso2.com) All Rights Reserved.
+~
+~ Licensed under the Apache License, Version 2.0 (the "License");
+~ you may not use this file except in compliance with the License.
+~ You may obtain a copy of the License at
+~
+~  http://www.apache.org/licenses/LICENSE-2.0
+~
+~ Unless required by applicable law or agreed to in writing, software
+~ distributed under the License is distributed on an "AS IS" BASIS,
+~ WITHOUT WARRANTIES OR CONDITIONS OF ANY KIND, either express or implied.
+~ See the License for the specific language governing permissions and
+~ limitations under the License.
+-->
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+
+    <title>WSO2 APP Store</title>
+
+    <link rel="shortcut icon" href="libs/theme-wso2_1.0/images/favicon.png" />
+
+    <!-- Bootstrap CSS -->
+    <link href="libs/bootstrap_3.3.5/css/bootstrap.min.css" rel="stylesheet" type="text/css" />
+
+    <!-- Font WSO2 CSS -->
+    <link href="libs/font-wso2_1.0.0/css/font-wso2.min.css" rel="stylesheet" type="text/css" />
+
+    <!-- Theme WSO2 CSS -->
+    <link href="libs/theme-wso2_1.0/css/theme-wso2.css" rel="stylesheet" type="text/css" />
+
+    <!-- Custom CSS -->
+    <link href="css/appm-main-styles.css" rel="stylesheet" type="text/css" />
+    <link href="css/appm-left-column-styles.css" rel="stylesheet" type="text/css" />
+
+    <!-- HTML5 shim and Respond.js for IE8 support of HTML5 elements and media queries -->
+    <!-- WARNING: Respond.js doesn't work if you view the page via file:// -->
+    <!--[if lt IE 9]>
+    <script src="libs/html5shiv_3.7.2/html5shiv.min.js"></script>
+    <script src="libs/respond_1.4.2/respond.min.js"></script>
+    <![endif]-->
+
+</head>
+<body>
+
+<!-- header -->
+<header class="header header-default">
+    <div class="container-fluid">
+        <div class="brand pull-left float-remove-xs text-center-xs">
+            <a href="#">
+                <img src="libs/theme-wso2_1.0/images/logo-inverse.svg" alt="apps-store" title="apps-store"
+                     class="logo" />
+
+                <h1 class="display-block-xs">APP Store</h1>
+            </a>
+        </div>
+        <div class="auth remove-margin-right pull-right float-remove-xs text-center-xs">
+            <a href="#" class="header-action">
+                <span class="icon"><i class="fw fw-sign-up add-padding-right-1x"></i></span>
+                <span class="text-uppercase">register</span>
+            </a>
+            <a href="#" class="header-action">
+                <span class="icon"><i class="glyphicon glyphicon-off add-padding-right-1x"></i></span>
+                <span class="text-uppercase">login</span>
+            </a>
+        </div>
+    </div>
+</header>
+
+<!-- navbar -->
+<nav class="navbar navbar-default navbar-dark" data-spy="affix" data-offset-top="50" data-offset-bottom="40">
+    <div class="container-fluid">
+        <div class="navbar-header">
+            <ul class="nav navbar-nav">
+                <li class="dropdown">
+                    <a href="#" class="dropdown-toggle" data-toggle="dropdown" role="button" aria-expanded="false">
+                        <i class="fw fw-organization add-margin-right-1x"></i> Store abc.com <span class="caret"></span>
+                    </a>
+                    <ul class="dropdown-menu" role="menu">
+                        <li><a href="#">carbon.super</a></li>
+                        <li><a href="#">xyz.com</a></li>
+                        <li><a href="#">my.net</a></li>
+                    </ul>
+                </li>
+                <li>
+                    <a href="#">
+                        <span class="icon add-margin-right-1x"><i class="fw fw-web-app fw-lg"></i></span>Web Apps
+                    </a>
+                </li>
+                <li>
+                    <a href="#">
+                        <span class="icon add-margin-right-1x"><i class="fw fw-mobile fw-lg"></i></span>Mobile apps
+                    </a>
+                </li>
+                <li class="active">
+                    <a href="#">
+                        <span class="icon add-margin-right-1x"><i class="fw fw-globe fw-lg"></i></span>Sites
+                    </a>
+                </li>
+            </ul>
+        </div>
+    </div>
+</nav>
+
+<!-- #page-content-wrapper -->
+<div class="page-content-wrapper">
+
+    <!-- media-->
+    <div class="media">
+
+        <!-- media left-->
+        <div class="media-left">
+
+            <nav class="navigation">
+                <a href="#" class="active red">
+                    <span class="icon"><i class="fw fw-heart"></i></span>
+                    <span class="navigation-item hidden-xs hidden-sm">My Favorites</span>
+                </a>
+                <a href="#" class="purple">
+                    <span class="icon"><i class="fw fw-application"></i></span>
+                    <span class="navigation-item hidden-xs hidden-sm">My Apps</span>
+                </a>
+                <a href="#" class="blue">
+                    <span class="icon"><i class="fw fw-resource"></i></span>
+                    <span class="navigation-item hidden-xs hidden-sm">All Apps</span>
+                </a>
+            </nav>
+
+            <div class="tags-wrapper hidden-xs hidden-sm">
+                <div class="tag-title"> Tags</div>
+                <ul class="tag-content">
+                    <li>Business</li>
+                    <li>Comics</li>
+                    <li class="active">Communication</li>
+                    <li>Education</li>
+                    <li>Entertainment</li>
+                    <li>Finance</li>
+                    <li>Health & Fitness</li>
+                    <li>Media & Video</li>
+                    <li>Medical</li>
+                    <li>Music & Audio</li>
+                    <li>Shopping</li>
+                    <li>Social</li>
+                    <li>Sports</li>
+                    <li>Travel & Local</li>
+                    <li>Widgets</li>
+                    <div class="tag-more">more..</div>
+                </ul>
+            </div>
+
+        </div>
+
+        <!-- media body-->
+        <div class="media-body">
+            <!-- navbar -->
+            <div class="navbar-wrapper">
+                <nav class="navbar navbar-default">
+                    <div class="col-xs-12 col-sm-12 col-md-12 col-lg-6">
+                        <div class="search-box input-group">
+                            <input type="text" class="search-field form-control" placeholder="Search..." />
+
+                            <div class="input-group-btn">
+                                <button class="search-btn form-control-btn" type="button" title="Search">
+                                    <i class="fw fw-search" aria-hidden="true"></i>
+                                </button>
+                            </div>
+                            <span class="search-category input-group-addon">
+                                <select>
+                                    <option selected="selected" value="name">By Name</option>
+                                    <option value="provider">By Provider</option>
+                                </select>
+                            </span>
+                        </div>
+                    </div>
+                </nav>
+            </div>
+
+            <!-- page content -->
+            <div class="container-fluid body-wrapper">
+
+                <div class="page-header">
+                    <div class="pull-left hidden-xs">
+                        <h3 class="page-title">Site</h3>
+                    </div>
+                </div>
+                <div class="page-content">
+                    <div class="app-details row remove-margin-left remove-margin-right">
+                        <div class="hidden-xs col-sm-7 col-md-6 col-lg-6 add-padding-1x">
+                            <a href="/app/id" title="Click to launch">
+                                <div class="app-details-banner">
+                                    <div class="banner-image">
+                                        <img src="http://lorempixel.com/1600/900/sports/2/">
+                                    </div>
+                                    <div class="banner-overlay">
+                                        <span class="fw-stack">
+                                            <i class="fw fw-circle-outline fw-stack-2x"></i>
+                                            <i class="fw fw-deploy fw-stack-1x"></i>
+                                        </span>
+                                    </div>
+                                </div>
+                            </a>
+                        </div>
+
+                        <div class="col-xs-12 col-sm-5 col-md-6 col-lg-6">
+                            <div class="row">
+                                <div class="col-xs-12 col-sm-5 col-md-5 col-lg-5 add-padding-1x">
+                                    <a href="/app/id" title="Click to launch">
+                                        <div class="app-details-thumbnail">
+                                            <div class="thumbnail-image">
+                                                <img src="http://lorempixel.com/400/300/sports/3/">
+                                            </div>
+                                        </div>
+                                    </a>
+                                </div>
+                            </div>
+                            <div class="row">
+                                <div class="col-xs-12 col-sm-12 col-md-12 col-lg-12">
+                                    <h4>Dev Service Weekly Update</h4>
+
+                                    <p>
+                                        Version : 1.0.0<br>
+                                        By : admin-AT-wso2.com<br>
+                                        Status: Published
+                                    </p>
+
+                                    <span class="rating">
+                                        <i class="fw fw-star one"></i>
+                                        <i class="fw fw-star one"></i>
+                                        <i class="fw fw-star one"></i>
+                                        <i class="fw fw-star zero"></i>
+                                        <i class="fw fw-star zero"></i>
+                                    </span>
+
+                                    <div class="app-details-actions">
+                                        <a href="#" class="btn btn-primary">
+                                            <i class="fw fw-deploy"></i>Launch
+                                        </a>
+                                        <a href="#" class="btn btn-success">
+                                            <i class="fw fw-subscribe"></i>Subscribe
+                                        </a>
+                                        <a href="#" class="btn btn-success">
+                                            <i class="fw fw-enterprise"></i>Ent. Subscribe
+                                        </a>
+                                        <a href="#" class="btn btn-default">
+                                            Un-Subscribe
+                                        </a>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="row">
+                        <div class="col-xs-12 col-sm-12 col-md-12 col-lg-12">
+
+                            <div class="app-details-tabs add-margin-top-5x">
+                                <ul class="nav nav-tabs">
+                                    <li class="active"><a data-toggle="tab" href="#menu1">Overview</a></li>
+                                    <li><a data-toggle="tab" href="#menu2">Documentation</a></li>
+                                    <li><a data-toggle="tab" href="#menu3">User Reviews</a></li>
+                                    <li><a data-toggle="tab" href="#menu4">Screenshots</a></li>
+                                </ul>
+
+                                <div class="tab-content" style="background-color: white;">
+                                    <div id="menu1" class="tab-pane fade in active">
+                                        <h3>Title</h3>
+
+                                        <p>
+                                            Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod
+                                            tempor incididunt ut labore et dolore magna aliqua.
+                                        </p>
+                                    </div>
+                                    <div id="menu2" class="tab-pane fade">
+                                        <h3>Title</h3>
+
+                                        <p>Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut
+                                           aliquip ex ea commodo consequat.</p>
+                                    </div>
+                                    <div id="menu3" class="tab-pane fade">
+                                        <h3>Title</h3>
+
+                                        <p>
+                                            Sed ut perspiciatis unde omnis iste natus error sit voluptatem accusantium
+                                            doloremque laudantium, totam rem aperiam.
+                                        </p>
+                                    </div>
+                                    <div id="menu4" class="tab-pane fade">
+                                        <div class="row">
+                                            <div class="col-xs-12 col-sm-4 col-md-4 col-lg-4">
+                                                <div class="thumbnail">
+                                                    <img class="img-responsive" src="http://placehold.it/100x100.png" />
+                                                </div>
+                                            </div>
+                                            <div class="col-xs-12 col-sm-4 col-md-4 col-lg-4">
+                                                <div class="thumbnail">
+                                                    <img class="img-responsive" src="http://placehold.it/300x500.png" />
+                                                </div>
+                                            </div>
+                                            <div class="col-xs-12 col-sm-4 col-md-4 col-lg-4">
+                                                <div class="thumbnail">
+                                                    <img class="img-responsive" src="http://placehold.it/400x100.png" />
+                                                </div>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>
+<!-- /#page-content-wrapper -->
+
+<!--Store content goes here-->
+
+<!-- footer -->
+<footer class="footer">
+    <div class="container-fluid">
+        <p>WSO2 App Manager v1.0.0 | &copy;
+            <script>document.write(new Date().getFullYear());</script>
+            <a href="http://wso2.com/" target="_blank"><i class="icon fw fw-wso2"></i> Inc</a>.
+        </p>
+    </div>
+</footer>
+
+<!-- Jquery/Jquery UI JS -->
+<script src="libs/jquery_1.11.0/jquery-1.11.3.min.js"></script>
+
+<!-- Bootstrap JS -->
+<script src="libs/bootstrap_3.3.5/js/bootstrap.min.js"></script>
+
+<!-- Theme WSO2 JS -->
+<script src="libs/theme-wso2_1.0/js/theme-wso2.js"></script>
+
+</body>
+</html>
