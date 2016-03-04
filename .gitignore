@@ -60,3 +60,5 @@ _xmsgs/
 .idea
 .DS_Store
 atlassian-ide-plugin.xml
+
+*.iml
