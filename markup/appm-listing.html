@@ -61,20 +61,22 @@
             </a>
         </div>
         <div class="auth remove-margin-right pull-right float-remove-xs text-center-xs">
-            <a href="#" class="header-action">
-                <span class="icon"><i class="fw fw-sign-up add-padding-right-1x"></i></span>
-                <span class="text-uppercase">register</span>
+            <a href="#" class="dropdown" data-toggle="dropdown">
+                <span class="hidden-xs add-padding-left-3x">admin<span class="caret"></span></span>
+                <span class="icon fw-stack fw-lg"><i class="fw fw-user fw-stack-1x"></i></span>
             </a>
-            <a href="#" class="header-action">
-                <span class="icon"><i class="glyphicon glyphicon-off add-padding-right-1x"></i></span>
-                <span class="text-uppercase">login</span>
-            </a>
+            <ul class="dropdown-menu float-remove-xs position-static-xs text-center-xs remove-margin-xs"
+                role="menu">
+                <li class="dropdown-header visible-xs">admin<span class="caret"></span></li>
+                <li class="divider visible-xs"></li>
+                <li><a href="/logout">Sign Out</a></li>
+            </ul>
         </div>
     </div>
 </header>
 
 <!-- navbar -->
-<nav class="navbar navbar-default navbar-dark" data-spy="affix" data-offset-top="50" data-offset-bottom="40">
+<nav class="actions-bar navbar navbar-default" data-spy="affix" data-offset-top="50" data-offset-bottom="40">
     <div class="container-fluid">
         <div class="navbar-header">
             <ul class="nav navbar-nav">
@@ -119,7 +121,7 @@
 
             <nav class="navigation">
                 <a href="#" class="background-color-favorite">
-                    <span class="icon active background-color-favorite"><i class="fw fw-heart"></i></span>
+                    <span class="icon background-color-favorite"><i class="fw fw-heart"></i></span>
                     <span class="navigation-item hidden-xs hidden-sm active background-color-on-hover-favorite">
                         My Favorites
                     </span>
@@ -138,8 +140,8 @@
                 </a>
             </nav>
 
-            <div class="tags-wrapper hidden-xs hidden-sm">
-                <div class="tag-title"> Tags</div>
+            <div class="add-margin-top-3x hidden-xs hidden-sm">
+                <div class="tags-title"> Tags</div>
                 <ul class="tag-content">
                     <li>Business</li>
                     <li>Comics</li>
@@ -164,28 +166,29 @@
 
         <!-- media body-->
         <div class="media-body">
-            <!-- navbar -->
-            <div class="navbar-wrapper">
-                <nav class="navbar navbar-default">
-                    <div class="col-xs-12 col-sm-12 col-md-12 col-lg-6">
-                        <div class="search-box input-group">
-                            <input type="text" class="search-field form-control" placeholder="Search..." />
+            <!-- search bar -->
+            <nav class="search-bar navbar navbar-default">
+                <div class="search-box col-xs-12 col-sm-12 col-md-12 col-lg-6">
+                    <div class="input-group">
+                        <input type="text" class="search-field form-control" placeholder="Search for web apps" />
 
-                            <div class="input-group-btn">
-                                <button class="search-btn form-control-btn" type="button" title="Search">
-                                    <i class="fw fw-search" aria-hidden="true"></i>
-                                </button>
-                            </div>
-                            <span class="search-category input-group-addon">
-                                <select>
-                                    <option selected="selected" value="name">By Name</option>
-                                    <option value="provider">By Provider</option>
-                                </select>
-                            </span>
+                        <div class="input-group-btn">
+                            <button type="button" class="btn">
+                                <i class="fw fw-search"></i>
+                            </button>
+                            <button type="button" id="abc" class="btn dropdown-toggle search-by"
+                                    data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+                                By Name <span class="caret"></span>
+                            </button>
+                            <ul class="dropdown-menu dropdown-menu-right dropdown-selectable search-by-dropdown"
+                                data-target="#abc">
+                                <li><a>By Name</a></li>
+                                <li><a>By Provider</a></li>
+                            </ul>
                         </div>
                     </div>
-                </nav>
-            </div>
+                </div>
+            </nav>
 
             <!-- page content -->
             <div class="container-fluid body-wrapper">
@@ -205,42 +208,46 @@
                 </div>
                 <div class="page-content">
                     <div class="row">
-                        <!--app tiles-->
+                        <!-- app tile - 1 -->
                         <div class="col-xs-12 col-sm-4 col-md-3 col-lg-2">
                             <div class="app-tile">
-                                <a href="/app/id">
-                                    <div class="app-tile-thumbnail">
-                                        <div class="thumbnail-ribbon background-color-favorite
-                                        col-xs-offset-1 col-sm-offset-1 col-md-offset-1 col-lg-offset-1
+                                <a href="/app/id" class="hover-overlay-container">
+                                    <div class="ratio-responsive-4by3">
+                                        <div class="app-thumbnail-ribbon background-color-favorite
+                                        col-xs-offset-2 col-sm-offset-2 col-md-offset-1 col-lg-offset-1
                                         col-xs-1 col-sm-2 col-md-2 col-lg-2">
-                                            <span class="text-center-force"><i class="fw fw-heart"></i></span>
+                                            <span><i class="fw fw-heart"></i></span>
                                         </div>
-                                        <div class="thumbnail-image">
-                                            <img src="images/app-1.jpg">
+                                        <div class="ratio-responsive-img">
+                                            <img src="http://placehold.it/400x300.png" />
                                         </div>
 
-                                        <div class="thumbnail-overlay">
-                                            <span class="fw-stack">
+                                        <div class="hover-overlay">
+                                            <span class="fw-stack fw-2x absolute-center">
                                                 <i class="fw fw-circle-outline fw-stack-2x"></i>
-                                                <i class="fw fw-view fw-stack-1x"></i>
+                                                <i class="fw fw-deploy fw-stack-1x"></i>
                                             </span>
                                         </div>
                                     </div>
                                 </a>
 
-                                <div class="app-tile-details">
-                                    <h4>Project Name</h4>
+                                <div class="summery">
+                                    <h4>Favorite App</h4>
                                     <h5>v1.0.0</h5>
 
                                     <p>Admin</p>
-                                    <i class="fw fw-star"></i>
-                                    <i class="fw fw-star"></i>
-                                    <i class="fw fw-star"></i>
-                                    <i class="fw fw-star"></i>
-                                    <i class="fw fw-star"></i>
+
+                                    <span class="rating">
+                                        <i class="fw fw-star one"></i>
+                                        <i class="fw fw-star one"></i>
+                                        <i class="fw fw-star one"></i>
+                                        <i class="fw fw-star one"></i>
+                                        <i class="fw fw-star one"></i>
+                                    </span>
 
                                     <div class="more-menu pull-right">
-                                        <a href="#" class="more-menu-btn dropdown-toggle" data-toggle="dropdown">
+                                        <a href="#" class="more-menu-btn dropdown-toggle" data-toggle="dropdown"
+                                           title="Click for more options">
                                             <i class="fw fw-ellipsis fw-rotate-90"></i>
                                         </a>
                                         <ul class="more-menu-items dropdown-menu">
@@ -251,20 +258,22 @@
                                 </div>
                             </div>
                         </div>
+                        <!-- app tile - 2 -->
                         <div class="col-xs-12 col-sm-4 col-md-3 col-lg-2">
                             <div class="app-tile">
-                                <a href="/app/id">
-                                    <div class="app-tile-thumbnail">
-                                        <div class="thumbnail-ribbon background-color-subscribe
+                                <a href="/app/id" class="hover-overlay-container">
+                                    <div class="ratio-responsive-4by3">
+                                        <div class="app-thumbnail-ribbon background-color-subscribe
                                         col-xs-offset-2 col-sm-offset-2 col-md-offset-1 col-lg-offset-1
                                         col-xs-1 col-sm-2 col-md-2 col-lg-2">
-                                            <span class="text-center-force"><i class="fw fw-subscribe"></i></span>
+                                            <span><i class="fw fw-subscribe"></i></span>
                                         </div>
-                                        <div class="thumbnail-image">
-                                            <img src="images/app-2.jpg">
+                                        <div class="ratio-responsive-img">
+                                            <img src="http://placehold.it/400x300.png" />
                                         </div>
-                                        <div class="thumbnail-overlay">
-                                            <span class="fw-stack fw-lg">
+
+                                        <div class="hover-overlay">
+                                            <span class="fw-stack fw-2x absolute-center">
                                                 <i class="fw fw-circle-outline fw-stack-2x"></i>
                                                 <i class="fw fw-deploy fw-stack-1x"></i>
                                             </span>
@@ -272,74 +281,89 @@
                                     </div>
                                 </a>
 
-                                <div class="app-tile-details">
-                                    <h4>Project Name</h4>
+                                <div class="summery">
+                                    <h4>Subscribed App</h4>
                                     <h5>v1.0.0</h5>
 
                                     <p>Admin</p>
-                                    <i class="fw fw-star"></i>
-                                    <i class="fw fw-star"></i>
-                                    <i class="fw fw-star"></i>
-                                    <i class="fw fw-star"></i>
-                                    <i class="fw fw-star"></i>
+
+                                    <span class="rating">
+                                        <i class="fw fw-star zero"></i>
+                                        <i class="fw fw-star zero"></i>
+                                        <i class="fw fw-star zero"></i>
+                                        <i class="fw fw-star zero"></i>
+                                        <i class="fw fw-star zero"></i>
+                                    </span>
 
                                     <div class="more-menu pull-right">
-                                        <a href="#" class="more-menu-btn dropdown-toggle" data-toggle="dropdown">
+                                        <a href="#" class="more-menu-btn dropdown-toggle" data-toggle="dropdown"
+                                           title="Click for more options">
                                             <i class="fw fw-ellipsis fw-rotate-90"></i>
                                         </a>
                                         <ul class="more-menu-items dropdown-menu">
-                                            <li><a href="#">Add to Favorite</a></li>
+                                            <li><a href="#">Add to Favorites</a></li>
                                             <li><a href="#">More Details</a></li>
                                         </ul>
                                     </div>
                                 </div>
                             </div>
                         </div>
+                        <!-- app tile - 3 -->
                         <div class="col-xs-12 col-sm-4 col-md-3 col-lg-2">
                             <div class="app-tile">
-                                <a href="/app/id">
-                                    <div class="app-tile-thumbnail">
-                                        <div class="thumbnail-ribbon background-color-ad
+                                <a href="/app/id" class="hover-overlay-container">
+                                    <div class="ratio-responsive-4by3">
+                                        <div class="app-thumbnail-ribbon background-color-ad
                                         col-xs-offset-2 col-sm-offset-2 col-md-offset-1 col-lg-offset-1
                                         col-xs-1 col-sm-2 col-md-2 col-lg-2">
-                                            <span class="text-center-force">Ad</span>
+                                            <span>Ad</span>
                                         </div>
-                                        <div class="thumbnail-default" style="background-color: #d35400;">
-                                            <div class="text-center-force">Aw</div>
+                                        <div class="ratio-responsive-item responsive-text"
+                                             style="background-color: #e67e22;">
+                                            <span class="default-thumbnail">Aw</span>
                                         </div>
 
-                                        <div class="thumbnail-overlay">
-                                            <span class="fw-stack fw-lg">
+                                        <div class="hover-overlay">
+                                            <span class="fw-stack fw-2x absolute-center">
                                                 <i class="fw fw-circle-outline fw-stack-2x"></i>
-                                                <i class="fw fw-info fw-stack-1x"></i>
+                                                <i class="fw fw-view fw-stack-1x"></i>
                                             </span>
                                         </div>
                                     </div>
                                 </a>
 
-                                <div class="app-tile-details">
-                                    <h4>Project Name</h4>
+                                <div class="summery">
+                                    <h4>Advertised App</h4>
                                     <h5>v1.0.0</h5>
 
                                     <p>Admin</p>
-                                    <i class="fw fw-star"></i>
-                                    <i class="fw fw-star"></i>
-                                    <i class="fw fw-star"></i>
-                                    <i class="fw fw-star"></i>
-                                    <i class="fw fw-star"></i>
+
+                                    <span class="rating">
+                                        <i class="fw fw-star one"></i>
+                                        <i class="fw fw-star one"></i>
+                                        <i class="fw fw-star one"></i>
+                                        <i class="fw fw-star zero"></i>
+                                        <i class="fw fw-star zero"></i>
+                                    </span>
                                 </div>
                             </div>
                         </div>
+                        <!-- app tile - 4 -->
                         <div class="col-xs-12 col-sm-4 col-md-3 col-lg-2">
                             <div class="app-tile">
-                                <a href="/app/id">
-                                    <div class="app-tile-thumbnail">
-                                        <div class="thumbnail-image">
-                                            <img src="http://placehold.it/100x100.png">
+                                <a href="/app/id" class="hover-overlay-container">
+                                    <div class="ratio-responsive-4by3">
+                                        <div class="app-thumbnail-ribbon background-color-subscribe
+                                        col-xs-offset-2 col-sm-offset-2 col-md-offset-1 col-lg-offset-1
+                                        col-xs-1 col-sm-2 col-md-2 col-lg-2">
+                                            <span><i class="fw fw-mobile"></i></span>
+                                        </div>
+                                        <div class="ratio-responsive-img">
+                                            <img src="http://placehold.it/400x300.png" />
                                         </div>
 
-                                        <div class="thumbnail-overlay">
-                                            <span class="fw-stack fw-lg">
+                                        <div class="hover-overlay">
+                                            <span class="fw-stack fw-2x absolute-center">
                                                 <i class="fw fw-circle-outline fw-stack-2x"></i>
                                                 <i class="fw fw-view fw-stack-1x"></i>
                                             </span>
@@ -347,29 +371,46 @@
                                     </div>
                                 </a>
 
-                                <div class="app-tile-details">
-                                    <h4><a href="#">Project Name</a></h4>
-                                    <h5><a href="#">v1.0.0</a></h5>
+                                <div class="summery">
+                                    <h4>Installed Mobile App</h4>
+                                    <h5>v1.0.0</h5>
 
                                     <p>Admin</p>
-                                    <i class="fw fw-star"></i>
-                                    <i class="fw fw-star"></i>
-                                    <i class="fw fw-star"></i>
-                                    <i class="fw fw-star"></i>
-                                    <i class="fw fw-star"></i>
+
+                                    <span class="rating">
+                                        <i class="fw fw-star one"></i>
+                                        <i class="fw fw-star one"></i>
+                                        <i class="fw fw-star one"></i>
+                                        <i class="fw fw-star zero"></i>
+                                        <i class="fw fw-star zero"></i>
+                                    </span>
+
+                                    <div class="more-menu pull-right">
+                                        <a href="#" class="more-menu-btn dropdown-toggle" data-toggle="dropdown"
+                                           title="Click for more options">
+                                            <i class="fw fw-ellipsis fw-rotate-90"></i>
+                                        </a>
+                                        <ul class="more-menu-items dropdown-menu">
+                                            <li><a href="#">More Details</a></li>
+                                        </ul>
+                                    </div>
                                 </div>
                             </div>
                         </div>
+                        <!-- app tile - 5 -->
                         <div class="col-xs-12 col-sm-4 col-md-3 col-lg-2">
                             <div class="app-tile">
-                                <a href="/app/id">
-                                    <div class="app-tile-thumbnail">
-                                        <div class="thumbnail-image">
-                                            <img src="http://placehold.it/200x200.png">
+                                <a href="/app/id" class="hover-overlay-container">
+                                    <div class="ratio-responsive-4by3">
+                                        <div class="ratio-responsive-img">
+                                            <img src="http://placehold.it/400x300.png" />
                                         </div>
-
-                                        <div class="thumbnail-overlay">
-                                            <span class="fw-stack fw-lg">
+                                        <div class="app-thumbnail-type background-color-android
+                                        col-xs-2 col-sm-3 col-md-3 col-lg-3">
+                                            <span><i class="fw fw-android"></i></span>
+                                        </div>
+                                        <div class="hover-overlay">
+                                            <span class="fw-stack fw-2x absolute-center">
                                                 <i class="fw fw-circle-outline fw-stack-2x"></i>
                                                 <i class="fw fw-view fw-stack-1x"></i>
                                             </span>
@@ -377,29 +418,46 @@
                                     </div>
                                 </a>
 
-                                <div class="app-tile-details">
-                                    <h4><a href="#">Project Name</a></h4>
-                                    <h5><a href="#">v1.0.0</a></h5>
+                                <div class="summery">
+                                    <h4>Android App</h4>
+                                    <h5>v1.0.0</h5>
 
                                     <p>Admin</p>
-                                    <i class="fw fw-star"></i>
-                                    <i class="fw fw-star"></i>
-                                    <i class="fw fw-star"></i>
-                                    <i class="fw fw-star"></i>
-                                    <i class="fw fw-star"></i>
+
+                                    <span class="rating">
+                                        <i class="fw fw-star one"></i>
+                                        <i class="fw fw-star one"></i>
+                                        <i class="fw fw-star one"></i>
+                                        <i class="fw fw-star zero"></i>
+                                        <i class="fw fw-star zero"></i>
+                                    </span>
+
+                                    <div class="more-menu pull-right">
+                                        <a href="#" class="more-menu-btn dropdown-toggle" data-toggle="dropdown"
+                                           title="Click for more options">
+                                            <i class="fw fw-ellipsis fw-rotate-90"></i>
+                                        </a>
+                                        <ul class="more-menu-items dropdown-menu">
+                                            <li><a href="#">More Details</a></li>
+                                        </ul>
+                                    </div>
                                 </div>
                             </div>
                         </div>
+                        <!-- app tile - 6 -->
                         <div class="col-xs-12 col-sm-4 col-md-3 col-lg-2">
                             <div class="app-tile">
-                                <a href="/app/id">
-                                    <div class="app-tile-thumbnail">
-                                        <div class="thumbnail-image">
-                                            <img src="http://placehold.it/300x300.png">
+                                <a href="/app/id" class="hover-overlay-container">
+                                    <div class="ratio-responsive-4by3">
+                                        <div class="ratio-responsive-img">
+                                            <img src="http://placehold.it/400x300.png" />
                                         </div>
-
-                                        <div class="thumbnail-overlay">
-                                            <span class="fw-stack fw-lg">
+                                        <div class="app-thumbnail-type background-color-apple
+                                        col-xs-2 col-sm-3 col-md-3 col-lg-3">
+                                            <span><i class="fw fw-apple"></i></span>
+                                        </div>
+                                        <div class="hover-overlay">
+                                            <span class="fw-stack fw-2x absolute-center">
                                                 <i class="fw fw-circle-outline fw-stack-2x"></i>
                                                 <i class="fw fw-view fw-stack-1x"></i>
                                             </span>
@@ -407,29 +465,46 @@
                                     </div>
                                 </a>
 
-                                <div class="app-tile-details">
-                                    <h4><a href="#">Project Name</a></h4>
-                                    <h5><a href="#">v1.0.0</a></h5>
+                                <div class="summery">
+                                    <h4>iOS App</h4>
+                                    <h5>v1.0.0</h5>
 
                                     <p>Admin</p>
-                                    <i class="fw fw-star"></i>
-                                    <i class="fw fw-star"></i>
-                                    <i class="fw fw-star"></i>
-                                    <i class="fw fw-star"></i>
-                                    <i class="fw fw-star"></i>
+
+                                    <span class="rating">
+                                        <i class="fw fw-star one"></i>
+                                        <i class="fw fw-star one"></i>
+                                        <i class="fw fw-star one"></i>
+                                        <i class="fw fw-star zero"></i>
+                                        <i class="fw fw-star zero"></i>
+                                    </span>
+
+                                    <div class="more-menu pull-right">
+                                        <a href="#" class="more-menu-btn dropdown-toggle" data-toggle="dropdown"
+                                           title="Click for more options">
+                                            <i class="fw fw-ellipsis fw-rotate-90"></i>
+                                        </a>
+                                        <ul class="more-menu-items dropdown-menu">
+                                            <li><a href="#">More Details</a></li>
+                                        </ul>
+                                    </div>
                                 </div>
                             </div>
                         </div>
+                        <!-- app tile - 7 -->
                         <div class="col-xs-12 col-sm-4 col-md-3 col-lg-2">
                             <div class="app-tile">
-                                <a href="/app/id">
-                                    <div class="app-tile-thumbnail">
-                                        <div class="thumbnail-image">
-                                            <img src="http://placehold.it/400x400.png">
+                                <a href="/app/id" class="hover-overlay-container">
+                                    <div class="ratio-responsive-4by3">
+                                        <div class="ratio-responsive-img">
+                                            <img src="http://placehold.it/400x300.png" />
                                         </div>
-
-                                        <div class="thumbnail-overlay">
-                                            <span class="fw-stack fw-lg">
+                                        <div class="app-thumbnail-type background-color-windows
+                                        col-xs-2 col-sm-3 col-md-3 col-lg-3">
+                                            <span><i class="fw fw-windows"></i></span>
+                                        </div>
+                                        <div class="hover-overlay">
+                                            <span class="fw-stack fw-2x absolute-center">
                                                 <i class="fw fw-circle-outline fw-stack-2x"></i>
                                                 <i class="fw fw-view fw-stack-1x"></i>
                                             </span>
@@ -437,29 +512,43 @@
                                     </div>
                                 </a>
 
-                                <div class="app-tile-details">
-                                    <h4><a href="#">Project Name</a></h4>
-                                    <h5><a href="#">v1.0.0</a></h5>
+                                <div class="summery">
+                                    <h4>Windows App</h4>
+                                    <h5>v1.0.0</h5>
 
                                     <p>Admin</p>
-                                    <i class="fw fw-star"></i>
-                                    <i class="fw fw-star"></i>
-                                    <i class="fw fw-star"></i>
-                                    <i class="fw fw-star"></i>
-                                    <i class="fw fw-star"></i>
+
+                                    <span class="rating">
+                                        <i class="fw fw-star one"></i>
+                                        <i class="fw fw-star one"></i>
+                                        <i class="fw fw-star one"></i>
+                                        <i class="fw fw-star zero"></i>
+                                        <i class="fw fw-star zero"></i>
+                                    </span>
+
+                                    <div class="more-menu pull-right">
+                                        <a href="#" class="more-menu-btn dropdown-toggle" data-toggle="dropdown"
+                                           title="Click for more options">
+                                            <i class="fw fw-ellipsis fw-rotate-90"></i>
+                                        </a>
+                                        <ul class="more-menu-items dropdown-menu">
+                                            <li><a href="#">More Details</a></li>
+                                        </ul>
+                                    </div>
                                 </div>
                             </div>
                         </div>
+                        <!-- app tile - 8 -->
                         <div class="col-xs-12 col-sm-4 col-md-3 col-lg-2">
                             <div class="app-tile">
-                                <a href="/app/id">
-                                    <div class="app-tile-thumbnail">
-                                        <div class="thumbnail-image">
-                                            <img src="http://placehold.it/500x500.png">
+                                <a href="/app/id" class="hover-overlay-container">
+                                    <div class="ratio-responsive-4by3">
+                                        <div class="ratio-responsive-img">
+                                            <img src="images/app-9.jpg" />
                                         </div>
 
-                                        <div class="thumbnail-overlay">
-                                            <span class="fw-stack fw-lg">
+                                        <div class="hover-overlay">
+                                            <span class="fw-stack fw-2x absolute-center">
                                                 <i class="fw fw-circle-outline fw-stack-2x"></i>
                                                 <i class="fw fw-view fw-stack-1x"></i>
                                             </span>
@@ -467,29 +556,44 @@
                                     </div>
                                 </a>
 
-                                <div class="app-tile-details">
-                                    <h4><a href="#">Project Name</a></h4>
-                                    <h5><a href="#">v1.0.0</a></h5>
+                                <div class="summery">
+                                    <h4>An App With A Long Name</h4>
+                                    <h5>v1.0.0 long version number 1.1.1.1.1.1.1.1.1.1.1</h5>
 
-                                    <p>Admin</p>
-                                    <i class="fw fw-star"></i>
-                                    <i class="fw fw-star"></i>
-                                    <i class="fw fw-star"></i>
-                                    <i class="fw fw-star"></i>
-                                    <i class="fw fw-star"></i>
+                                    <p>Very long provider name goes here</p>
+
+                                    <span class="rating">
+                                        <i class="fw fw-star one"></i>
+                                        <i class="fw fw-star one"></i>
+                                        <i class="fw fw-star one"></i>
+                                        <i class="fw fw-star one"></i>
+                                        <i class="fw fw-star one"></i>
+                                    </span>
+
+                                    <div class="more-menu pull-right">
+                                        <a href="#" class="more-menu-btn dropdown-toggle" data-toggle="dropdown"
+                                           title="Click for more options">
+                                            <i class="fw fw-ellipsis fw-rotate-90"></i>
+                                        </a>
+                                        <ul class="more-menu-items dropdown-menu">
+                                            <li><a href="#">Remove from Favorites</a></li>
+                                            <li><a href="#">More Details</a></li>
+                                        </ul>
+                                    </div>
                                 </div>
                             </div>
                         </div>
+                        <!-- app tile - 9 -->
                         <div class="col-xs-12 col-sm-4 col-md-3 col-lg-2">
                             <div class="app-tile">
-                                <a href="/app/id">
-                                    <div class="app-tile-thumbnail">
-                                        <div class="thumbnail-image">
-                                            <img src="http://placehold.it/150x350.png">
+                                <a href="/app/id" class="hover-overlay-container">
+                                    <div class="ratio-responsive-4by3">
+                                        <div class="ratio-responsive-img">
+                                            <img src="images/app-10.jpg" />
                                         </div>
 
-                                        <div class="thumbnail-overlay">
-                                            <span class="fw-stack fw-lg">
+                                        <div class="hover-overlay">
+                                            <span class="fw-stack fw-2x absolute-center">
                                                 <i class="fw fw-circle-outline fw-stack-2x"></i>
                                                 <i class="fw fw-view fw-stack-1x"></i>
                                             </span>
@@ -497,29 +601,44 @@
                                     </div>
                                 </a>
 
-                                <div class="app-tile-details">
-                                    <h4><a href="#">Project Name</a></h4>
-                                    <h5><a href="#">v1.0.0</a></h5>
+                                <div class="summery">
+                                    <h4>App Name</h4>
+                                    <h5>v1.0.0</h5>
 
-                                    <p>Admin</p>
-                                    <i class="fw fw-star"></i>
-                                    <i class="fw fw-star"></i>
-                                    <i class="fw fw-star"></i>
-                                    <i class="fw fw-star"></i>
-                                    <i class="fw fw-star"></i>
+                                    <p>admin-AT-wso2.com</p>
+
+                                    <span class="rating">
+                                        <i class="fw fw-star one"></i>
+                                        <i class="fw fw-star one"></i>
+                                        <i class="fw fw-star one"></i>
+                                        <i class="fw fw-star one"></i>
+                                        <i class="fw fw-star one"></i>
+                                    </span>
+
+                                    <div class="more-menu pull-right">
+                                        <a href="#" class="more-menu-btn dropdown-toggle" data-toggle="dropdown"
+                                           title="Click for more options">
+                                            <i class="fw fw-ellipsis fw-rotate-90"></i>
+                                        </a>
+                                        <ul class="more-menu-items dropdown-menu">
+                                            <li><a href="#">Remove from Favorites</a></li>
+                                            <li><a href="#">More Details</a></li>
+                                        </ul>
+                                    </div>
                                 </div>
                             </div>
                         </div>
+                        <!-- app tile - 10 -->
                         <div class="col-xs-12 col-sm-4 col-md-3 col-lg-2">
                             <div class="app-tile">
-                                <a href="/app/id">
-                                    <div class="app-tile-thumbnail">
-                                        <div class="thumbnail-image">
-                                            <img src="http://placehold.it/350x150.png">
+                                <a href="/app/id" class="hover-overlay-container">
+                                    <div class="ratio-responsive-4by3">
+                                        <div class="ratio-responsive-img">
+                                            <img src="images/app-11.jpg" />
                                         </div>
 
-                                        <div class="thumbnail-overlay">
-                                            <span class="fw-stack fw-lg">
+                                        <div class="hover-overlay">
+                                            <span class="fw-stack fw-2x absolute-center">
                                                 <i class="fw fw-circle-outline fw-stack-2x"></i>
                                                 <i class="fw fw-view fw-stack-1x"></i>
                                             </span>
@@ -527,29 +646,44 @@
                                     </div>
                                 </a>
 
-                                <div class="app-tile-details">
-                                    <h4><a href="#">Project Name</a></h4>
-                                    <h5><a href="#">v1.0.0</a></h5>
+                                <div class="summery">
+                                    <h4>App Name</h4>
+                                    <h5>v1.0.0</h5>
 
-                                    <p>Admin</p>
-                                    <i class="fw fw-star"></i>
-                                    <i class="fw fw-star"></i>
-                                    <i class="fw fw-star"></i>
-                                    <i class="fw fw-star"></i>
-                                    <i class="fw fw-star"></i>
+                                    <p>admin-AT-wso2.com</p>
+
+                                    <span class="rating">
+                                        <i class="fw fw-star one"></i>
+                                        <i class="fw fw-star one"></i>
+                                        <i class="fw fw-star one"></i>
+                                        <i class="fw fw-star one"></i>
+                                        <i class="fw fw-star one"></i>
+                                    </span>
+
+                                    <div class="more-menu pull-right">
+                                        <a href="#" class="more-menu-btn dropdown-toggle" data-toggle="dropdown"
+                                           title="Click for more options">
+                                            <i class="fw fw-ellipsis fw-rotate-90"></i>
+                                        </a>
+                                        <ul class="more-menu-items dropdown-menu">
+                                            <li><a href="#">Remove from Favorites</a></li>
+                                            <li><a href="#">More Details</a></li>
+                                        </ul>
+                                    </div>
                                 </div>
                             </div>
                         </div>
+                        <!-- app tile - 11 -->
                         <div class="col-xs-12 col-sm-4 col-md-3 col-lg-2">
                             <div class="app-tile">
-                                <a href="/app/id">
-                                    <div class="app-tile-thumbnail">
-                                        <div class="thumbnail-image">
-                                            <img src="http://placehold.it/400x300.png">
+                                <a href="/app/id" class="hover-overlay-container">
+                                    <div class="ratio-responsive-4by3">
+                                        <div class="ratio-responsive-img">
+                                            <img src="images/app-12.jpg" />
                                         </div>
 
-                                        <div class="thumbnail-overlay">
-                                            <span class="fw-stack fw-lg">
+                                        <div class="hover-overlay">
+                                            <span class="fw-stack fw-2x absolute-center">
                                                 <i class="fw fw-circle-outline fw-stack-2x"></i>
                                                 <i class="fw fw-view fw-stack-1x"></i>
                                             </span>
@@ -557,29 +691,44 @@
                                     </div>
                                 </a>
 
-                                <div class="app-tile-details">
-                                    <h4><a href="#">Project Name</a></h4>
-                                    <h5><a href="#">v1.0.0</a></h5>
+                                <div class="summery">
+                                    <h4>App Name</h4>
+                                    <h5>v1.0.0</h5>
 
-                                    <p>Admin</p>
-                                    <i class="fw fw-star"></i>
-                                    <i class="fw fw-star"></i>
-                                    <i class="fw fw-star"></i>
-                                    <i class="fw fw-star"></i>
-                                    <i class="fw fw-star"></i>
+                                    <p>admin-AT-wso2.com</p>
+
+                                    <span class="rating">
+                                        <i class="fw fw-star one"></i>
+                                        <i class="fw fw-star one"></i>
+                                        <i class="fw fw-star one"></i>
+                                        <i class="fw fw-star one"></i>
+                                        <i class="fw fw-star one"></i>
+                                    </span>
+
+                                    <div class="more-menu pull-right">
+                                        <a href="#" class="more-menu-btn dropdown-toggle" data-toggle="dropdown"
+                                           title="Click for more options">
+                                            <i class="fw fw-ellipsis fw-rotate-90"></i>
+                                        </a>
+                                        <ul class="more-menu-items dropdown-menu">
+                                            <li><a href="#">Remove from Favorites</a></li>
+                                            <li><a href="#">More Details</a></li>
+                                        </ul>
+                                    </div>
                                 </div>
                             </div>
                         </div>
+                        <!-- app tile - 12 -->
                         <div class="col-xs-12 col-sm-4 col-md-3 col-lg-2">
                             <div class="app-tile">
-                                <a href="/app/id">
-                                    <div class="app-tile-thumbnail">
-                                        <div class="thumbnail-image">
-                                            <img src="http://placehold.it/1024x768.png">
+                                <a href="/app/id" class="hover-overlay-container">
+                                    <div class="ratio-responsive-4by3">
+                                        <div class="ratio-responsive-img">
+                                            <img src="images/app-1.jpg" />
                                         </div>
 
-                                        <div class="thumbnail-overlay">
-                                            <span class="fw-stack fw-lg">
+                                        <div class="hover-overlay">
+                                            <span class="fw-stack fw-2x absolute-center">
                                                 <i class="fw fw-circle-outline fw-stack-2x"></i>
                                                 <i class="fw fw-view fw-stack-1x"></i>
                                             </span>
@@ -587,20 +736,33 @@
                                     </div>
                                 </a>
 
-                                <div class="app-tile-details">
-                                    <h4><a href="#">Project Name</a></h4>
-                                    <h5><a href="#">v1.0.0</a></h5>
+                                <div class="summery">
+                                    <h4>App Name</h4>
+                                    <h5>v1.0.0</h5>
 
-                                    <p>Admin</p>
-                                    <i class="fw fw-star"></i>
-                                    <i class="fw fw-star"></i>
-                                    <i class="fw fw-star"></i>
-                                    <i class="fw fw-star"></i>
-                                    <i class="fw fw-star"></i>
+                                    <p>admin-AT-wso2.com</p>
+
+                                    <span class="rating">
+                                        <i class="fw fw-star one"></i>
+                                        <i class="fw fw-star one"></i>
+                                        <i class="fw fw-star one"></i>
+                                        <i class="fw fw-star one"></i>
+                                        <i class="fw fw-star one"></i>
+                                    </span>
+
+                                    <div class="more-menu pull-right">
+                                        <a href="#" class="more-menu-btn dropdown-toggle" data-toggle="dropdown"
+                                           title="Click for more options">
+                                            <i class="fw fw-ellipsis fw-rotate-90"></i>
+                                        </a>
+                                        <ul class="more-menu-items dropdown-menu">
+                                            <li><a href="#">Remove from Favorites</a></li>
+                                            <li><a href="#">More Details</a></li>
+                                        </ul>
+                                    </div>
                                 </div>
                             </div>
                         </div>
-
                     </div>
                     <!-- pagination -->
                     <div class="pull-right-lg pull-right-md text-center-sm text-center-xs add-padding-bottom-2x">
@@ -641,5 +803,7 @@
 <!-- Theme WSO2 JS -->
 <script src="libs/theme-wso2_1.0/js/theme-wso2.js"></script>
 
+<!--AppM theme related JS -->
+<script src="js/appm-styles.js"></script>
 </body>
 </html>

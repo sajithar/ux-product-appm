@@ -27,7 +27,7 @@
     <link rel="shortcut icon" href="libs/theme-wso2_1.0/images/favicon.png" />
 
     <!-- Bootstrap CSS -->
-    <link href="libs/bootstrap_3.3.5/css/bootstrap.css" rel="stylesheet" type="text/css" />
+    <link href="libs/bootstrap_3.3.5/css/bootstrap.min.css" rel="stylesheet" type="text/css" />
 
     <!-- Font WSO2 CSS -->
     <link href="libs/font-wso2_1.0.0/css/font-wso2.min.css" rel="stylesheet" type="text/css" />
@@ -74,7 +74,8 @@
 </header>
 
 <!-- navbar -->
-<nav class="actions-bar navbar navbar-default" data-spy="affix" data-offset-top="50" data-offset-bottom="40">
+<nav class="actions-bar navbar navbar-default" data-spy="affix" data-offset-top="50"
+     data-offset-bottom="40">
     <div class="container-fluid">
         <div class="navbar-header">
             <ul class="nav navbar-nav">
@@ -88,12 +89,12 @@
                         <li><a href="#">my.net</a></li>
                     </ul>
                 </li>
-                <li class="active">
+                <li>
                     <a href="#">
                         <span class="icon add-margin-right-1x"><i class="fw fw-web-app fw-lg"></i></span>Web Apps
                     </a>
                 </li>
-                <li>
+                <li class="active">
                     <a href="#">
                         <span class="icon add-margin-right-1x"><i class="fw fw-mobile fw-lg"></i></span>Mobile apps
                     </a>
@@ -119,18 +120,12 @@
 
             <nav class="navigation">
                 <a href="#" class="">
-                    <span class="icon background-color-favorite"><i class="fw fw-heart"></i></span>
-                    <span class="navigation-item hidden-xs hidden-sm active background-color-on-hover-favorite">
-                        My Favorites
-                    </span>
-                </a>
-                <a href="#" class="background-color-subscribe">
                     <span class="icon background-color-subscribe"><i class="fw fw-application"></i></span>
                     <span class="navigation-item hidden-xs hidden-sm background-color-on-hover-subscribe">
                         My Apps
                     </span>
                 </a>
-                <a href="#" class="">
+                <a href="#" class="background-color-all-apps">
                     <span class="icon background-color-all-apps"><i class="fw fw-resource"></i></span>
                     <span class="navigation-item hidden-xs hidden-sm background-color-on-hover-all-apps">
                         All Apps
@@ -139,7 +134,7 @@
             </nav>
 
             <div class="add-margin-top-3x hidden-xs hidden-sm">
-                <div class="tags-title">Tags</div>
+                <div class="tags-title"> Tags</div>
                 <ul class="tag-content">
                     <li>Business</li>
                     <li>Comics</li>
@@ -168,21 +163,76 @@
             <nav class="search-bar navbar navbar-default">
                 <div class="search-box col-xs-12 col-sm-12 col-md-12 col-lg-6">
                     <div class="input-group">
-                        <input type="text" class="search-field form-control" placeholder="Search for web apps" />
+                        <input type="text" class="search-field form-control" placeholder="Search for mobile apps" />
 
                         <div class="input-group-btn">
                             <button type="button" class="btn">
                                 <i class="fw fw-search"></i>
                             </button>
-                            <button type="button" id="abc" class="btn dropdown-toggle search-by"
-                                    data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
-                                By Name <span class="caret"></span>
+                            <button type="button" class="btn search-by" data-toggle="collapse"
+                                    data-target="#searchPane">
+                                By <span class="caret"></span>
                             </button>
-                            <ul class="dropdown-menu dropdown-menu-right dropdown-selectable search-by-dropdown"
-                                data-target="#abc">
-                                <li><a>By Name</a></li>
-                                <li><a>By Provider</a></li>
-                            </ul>
+
+                        </div>
+                    </div>
+                    <div id="searchPane" class="search-options collapse col-xs-9 col-sm-6 col-md-6 col-lg-6">
+                        <div class="form-horizontal">
+                            <div class="form-group">
+                                <div class="col-xs-12 col-sm-12 col-md-12 col-lg-12">
+                                    <div class="radio">
+                                        <label>
+                                            <input type="radio" name="optionsRadios" value="Name" checked="checked" />
+                                            By Name
+                                        </label>
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="form-group">
+                                <div class="col-xs-12 col-sm-12 col-md-12 col-lg-12">
+                                    <div class="radio">
+                                        <label>
+                                            <input type="radio" name="optionsRadios" value="Provider" />
+                                            By Provider
+                                        </label>
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="form-group">
+                                <div class="col-xs-6 col-sm-6 col-md-6 col-lg-6 remove-padding-right">
+                                    <div class="radio">
+                                        <label>
+                                            <input type="radio" name="optionsRadios" value="Category" />
+                                            By Category
+                                        </label>
+                                    </div>
+                                </div>
+                                <div class="col-xs-6 col-sm-6 col-md-6 col-lg-6 remove-padding-left">
+                                    <select class="form-control">
+                                        <option>Business</option>
+                                        <option>Communication</option>
+                                        <option>Finance</option>
+                                        <option>Productivity</option>
+                                    </select>
+                                </div>
+                            </div>
+                            <div class="form-group">
+                                <div class="col-xs-6 col-sm-6 col-md-6 col-lg-6 remove-padding-right">
+                                    <div class="radio">
+                                        <label>
+                                            <input type="radio" name="optionsRadios" value="Platform" />
+                                            By Platform
+                                        </label>
+                                    </div>
+                                </div>
+                                <div class="col-xs-6 col-sm-6 col-md-6 col-lg-6 remove-padding-left">
+                                    <select class="form-control">
+                                        <option>Android</option>
+                                        <option>iOS</option>
+                                        <option>Windows</option>
+                                    </select>
+                                </div>
+                            </div>
                         </div>
                     </div>
                 </div>
@@ -193,47 +243,40 @@
 
                 <div class="page-header">
                     <div class="pull-left hidden-xs">
-                        <h3 class="page-title">Web App</h3>
+                        <h3 class="page-title">Mobile App</h3>
                     </div>
                 </div>
                 <div class="page-content">
                     <div class="app-details row remove-margin-left remove-margin-right">
                         <div class="hidden-xs col-sm-7 col-md-6 col-lg-6 add-padding-1x">
-                            <a href="/app/id" class="hover-overlay-container" title="Click to launch">
-                                <div class="ratio-responsive-16by9">
-                                    <div class="ratio-responsive-img">
-                                        <img src="http://lorempixel.com/800/450/sports/2/">
-                                    </div>
-                                    <div class="hover-overlay" style="height: 20%">
-                                        <span class="fw-stack absolute-center">
-                                            <i class="fw fw-circle-outline fw-stack-2x"></i>
-                                            <i class="fw fw-deploy fw-stack-1x"></i>
-                                        </span>
-                                    </div>
+                            <div class="ratio-responsive-16by9 hover-overlay-container">
+                                <div class="ratio-responsive-img">
+                                    <img src="http://lorempixel.com/800/450/sports/2/">
                                 </div>
-                            </a>
+                            </div>
                         </div>
 
                         <div class="col-xs-12 col-sm-5 col-md-6 col-lg-6">
                             <div class="row">
                                 <div class="col-xs-12 col-sm-5 col-md-5 col-lg-5 add-padding-1x">
-                                    <a href="/app/id" title="Click to launch">
-                                        <div class="ratio-responsive-4by3">
-                                            <div class="ratio-responsive-img">
-                                                <img src="http://lorempixel.com/400/300/sports/3/" />
-                                            </div>
+                                    <div class="ratio-responsive-4by3">
+                                        <div class="ratio-responsive-img">
+                                            <img src="http://lorempixel.com/400/300/sports/3/" />
                                         </div>
-                                    </a>
+                                        <div class="app-thumbnail-type background-color-android col-xs-2 col-sm-3 col-md-3 col-lg-3">
+                                            <span><i class="fw fw-android"></i></span>
+                                        </div>
+                                    </div>
                                 </div>
                             </div>
                             <div class="row">
                                 <div class="summery col-xs-12 col-sm-12 col-md-12 col-lg-12">
-                                    <h4>Dev Service Weekly Update</h4>
+                                    <h4>Mobile App</h4>
 
                                     <p>
                                         Version : 1.0.0<br>
                                         By : admin-AT-wso2.com<br>
-                                        Status: Published
+                                        Store Type : Enterprise
                                     </p>
 
                                     <span class="rating">
@@ -245,14 +288,14 @@
                                     </span>
 
                                     <div class="actions">
-                                        <a href="#" class="btn btn-primary">
-                                            <i class="fw fw-deploy"></i>Launch
+                                        <a href="#" class="btn btn-subscribe">
+                                            <i class="fw fw-mobile"></i>Install
                                         </a>
-                                        <a href="#" class="btn btn-favorite">
-                                            <i class="fw fw-heart"></i>Add to Favorites
+                                        <a href="#" class="btn btn-subscribe">
+                                            <i class="fw fw-enterprise"></i>Ent. Install
                                         </a>
                                         <a href="#" class="btn btn-default">
-                                            Un-Subscribe
+                                            <i class="fw fw-refresh"></i>Re-Install
                                         </a>
                                     </div>
                                 </div>
@@ -264,25 +307,11 @@
                             <li class="active"><a data-toggle="tab" href="#menu1">Overview</a></li>
                             <li><a data-toggle="tab" href="#menu2">Documentation</a></li>
                             <li><a data-toggle="tab" href="#menu3">User Reviews</a></li>
+                            <li><a data-toggle="tab" href="#menu4">Screenshots</a></li>
                         </ul>
                         <div class="tab-content">
                             <div id="menu1" class="tab-pane fade in active">
                                 <h3>Title</h3>
-
-                                <div class="dropdown">
-                                    <button class="btn btn-default dropdown-toggle" type="button" id="dropdownMenu1"
-                                            data-toggle="dropdown" aria-haspopup="true" aria-expanded="true">
-                                        Dropdown
-                                        <span class="caret"></span>
-                                    </button>
-                                    <ul class="dropdown-menu" aria-labelledby="dropdownMenu1">
-                                        <li><a href="#">Action</a></li>
-                                        <li><a href="#">Another action</a></li>
-                                        <li><a href="#">Something else here</a></li>
-                                        <li role="separator" class="divider"></li>
-                                        <li><a href="#">Separated link</a></li>
-                                    </ul>
-                                </div>
 
                                 <p>
                                     Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod
@@ -302,6 +331,25 @@
                                     Sed ut perspiciatis unde omnis iste natus error sit voluptatem accusantium
                                     doloremque laudantium, totam rem aperiam.
                                 </p>
+                            </div>
+                            <div id="menu4" class="tab-pane fade">
+                                <div class="row">
+                                    <div class="col-xs-12 col-sm-4 col-md-4 col-lg-4">
+                                        <div class="thumbnail">
+                                            <img class="img-responsive" src="http://placehold.it/100x100.png" />
+                                        </div>
+                                    </div>
+                                    <div class="col-xs-12 col-sm-4 col-md-4 col-lg-4">
+                                        <div class="thumbnail">
+                                            <img class="img-responsive" src="http://placehold.it/300x500.png" />
+                                        </div>
+                                    </div>
+                                    <div class="col-xs-12 col-sm-4 col-md-4 col-lg-4">
+                                        <div class="thumbnail">
+                                            <img class="img-responsive" src="http://placehold.it/400x100.png" />
+                                        </div>
+                                    </div>
+                                </div>
                             </div>
                         </div>
                     </div>
@@ -333,7 +381,7 @@
 <!-- Theme WSO2 JS -->
 <script src="libs/theme-wso2_1.0/js/theme-wso2.js"></script>
 
- <!--AppM theme related JS -->
+<!--AppM theme related JS -->
 <script src="js/appm-styles.js"></script>
 </body>
 </html>
