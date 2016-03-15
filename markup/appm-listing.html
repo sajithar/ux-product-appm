@@ -138,11 +138,12 @@
                         All Apps
                     </span>
                 </a>
+                <div class="hidden-xs" style="width: 200px; height: 0;"></div>
             </nav>
 
-            <div class="add-margin-top-3x hidden-xs hidden-sm">
-                <div class="tags-title"> Tags</div>
-                <ul class="tag-content">
+            <div class="add-margin-top-3x hidden-xs hidden-sm" style="display: none">
+                <div class="section-title">Tags</div>
+                <ul class="tags">
                     <li>Business</li>
                     <li>Comics</li>
                     <li class="active">Communication</li>
@@ -158,7 +159,67 @@
                     <li>Sports</li>
                     <li>Travel & Local</li>
                     <li>Widgets</li>
-                    <div class="tag-more">more..</div>
+                </ul>
+            </div>
+
+            <div class="add-margin-top-3x hidden-xs hidden-sm" style="display: none">
+                <div class="section-title">Recent Apps</div>
+                <ul class="recent-app-items">
+                    <li class="">
+                        <a href="/app/id">
+                            <div class="recent-app-item-thumbnail">
+                                <img class="" src="http://placehold.it/40x30.png" />
+                            </div>
+                            <div class="recent-app-item-summery">
+                                <h4 class="media-heading">App Name</h4>
+                                Admin
+                            </div>
+                        </a>
+                    </li>
+                    <li class="">
+                        <a href="/app/id">
+                            <div class="recent-app-item-thumbnail">
+                                <div style="background-color: #e67e22;"></div>
+                            </div>
+                            <div class="recent-app-item-summery">
+                                <h4 class="media-heading">App Name</h4>
+                                Admin
+                            </div>
+                        </a>
+                    </li>
+                    <li class="">
+                        <a href="/app/id">
+                            <div class="recent-app-item-thumbnail">
+                                <img class="" src="http://placehold.it/100x100.png" />
+                            </div>
+                            <div class="recent-app-item-summery">
+                                <h4 class="media-heading">App Name</h4>
+                                Admin
+                            </div>
+                        </a>
+                    </li>
+                    <li class="">
+                        <a href="/app/id">
+                            <div class="recent-app-item-thumbnail">
+                                <img class="" src="http://placehold.it/500x300.png" />
+                            </div>
+                            <div class="recent-app-item-summery">
+                                <h4 class="media-heading">Very Long App Name</h4>
+                                Very Long Provider Name
+                            </div>
+                        </a>
+                    </li>
+                    <li class="">
+                        <a href="/app/id">
+                            <div class="recent-app-item-thumbnail">
+                                <img class="" src="http://placehold.it/900x600.png" />
+                            </div>
+                            <div class="recent-app-item-summery">
+                                <h4 class="media-heading">App Name</h4>
+                                Admin
+                            </div>
+                        </a>
+                    </li>
                 </ul>
             </div>
 
@@ -194,10 +255,19 @@
             <div class="container-fluid body-wrapper">
 
                 <div class="page-header">
-                    <div class="pull-left hidden-xs">
-                        <h3 class="page-title">Sites</h3>
+                    <div class="pull-left">
+                        <h3 class="page-title hidden-xs">Sites</h3>
+
+                        <div class="page-title-setting dropdown">
+                            <a href="#" class="dropdown-toggle" data-toggle="dropdown" title="Settings for this page">
+                                <i class="fw fw-settings fw-rotate-90">&nbsp;</i><span class="caret"></span>
+                            </a>
+                            <ul class="dropdown-menu" role="menu" aria-labelledby="menu1">
+                                <li><a href="#">Set this page as Home</a></li>
+                            </ul>
+                        </div>
                     </div>
-                    <div class="sorting-options pull-right float-remove-xs text-center-xs">
+                    <div class="sorting-options pull-right">
                         <div class="btn-group" role="group">
                             <a href="#" class="btn btn-default"><i class="fw fw-star"></i></a>
                             <a href="#" class="btn btn-default"><i class="fw fw-list-sort"></i></a>
@@ -557,10 +627,10 @@
                                 </a>
 
                                 <div class="summery">
-                                    <h4>An App With A Long Name</h4>
-                                    <h5>v1.0.0 long version number 1.1.1.1.1.1.1.1.1.1.1</h5>
+                                    <h4>An app Name, a long name</h4>
+                                    <h5>version number</h5>
 
-                                    <p>Very long provider name goes here</p>
+                                    <p>Provider Name</p>
 
                                     <span class="rating">
                                         <i class="fw fw-star one"></i>
