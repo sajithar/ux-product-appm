@@ -79,6 +79,15 @@
 <nav class="actions-bar navbar navbar-default" data-spy="affix" data-offset-top="50" data-offset-bottom="40">
     <div class="container-fluid">
         <div class="navbar-header">
+            <button type="button" class="navbar-toggle collapsed" data-toggle="collapse"
+                    data-target="#bs-example-navbar-collapse-1" aria-expanded="false">
+                <span class="sr-only">Toggle navigation</span>
+                <i class="fw fw-menu"></i>
+            </button>
+
+        </div>
+
+        <div class="collapse navbar-collapse" id="bs-example-navbar-collapse-1">
             <ul class="nav navbar-nav">
                 <li class="dropdown">
                     <a href="#" class="dropdown-toggle" data-toggle="dropdown" role="button" aria-expanded="false">
@@ -86,27 +95,19 @@
                     </a>
                     <ul class="dropdown-menu" role="menu">
                         <li><a href="#">carbon.super</a></li>
-                        <li><a href="#">xyz.com</a></li>
-                        <li><a href="#">my.net</a></li>
+                        <li class="active"><a href="#">abc.com</a></li>
+                        <li><a href="#">xyz.net</a></li>
                     </ul>
                 </li>
                 <li>
                     <a href="#">
-                        <span class="icon add-margin-right-1x"><i class="fw fw-web-app fw-lg"></i></span>Web Apps
-                    </a>
-                </li>
-                <li>
-                    <a href="#">
-                        <span class="icon add-margin-right-1x"><i class="fw fw-mobile fw-lg"></i></span>Mobile apps
-                    </a>
-                </li>
-                <li class="active">
-                    <a href="#">
-                        <span class="icon add-margin-right-1x"><i class="fw fw-globe fw-lg"></i></span>Sites
+                        <span class="icon add-margin-right-1x"><i class="fw fw-heart fw-lg"></i></span>Favorites
                     </a>
                 </li>
             </ul>
-        </div>
+        </div><!-- /.navbar-collapse -->
+    </div><!-- /.container-fluid -->
+
     </div>
 </nav>
 
@@ -114,34 +115,52 @@
 <div class="page-content-wrapper">
 
     <!-- media-->
-    <div class="media">
+    <div class="media remove-margin-top">
 
         <!-- media left-->
-        <div class="media-left">
-
+        <div class="media-left left-column">
             <nav class="navigation">
-                <a href="#" class="background-color-favorite">
-                    <span class="icon background-color-favorite"><i class="fw fw-heart"></i></span>
-                    <span class="navigation-item hidden-xs hidden-sm active background-color-on-hover-favorite">
-                        My Favorites
-                    </span>
-                </a>
-                <a href="#" class="">
-                    <span class="icon background-color-subscribe"><i class="fw fw-application"></i></span>
-                    <span class="navigation-item hidden-xs hidden-sm background-color-on-hover-subscribe">
-                        My Apps
-                    </span>
-                </a>
-                <a href="#" class="">
-                    <span class="icon background-color-all-apps"><i class="fw fw-resource"></i></span>
-                    <span class="navigation-item hidden-xs hidden-sm background-color-on-hover-all-apps">
-                        All Apps
-                    </span>
-                </a>
-                <div class="hidden-xs" style="width: 200px; height: 0;"></div>
+                <ul class="navigation-items">
+                    <li class="background-color-web active">
+                        <a href="#">
+                            <i class="navigation-item-icon fw fw-web-app"></i>
+                            <span class="navigation-item-text">
+                                Web Apps<i class="fw fw-up navigation-sub-items-toggle"></i>
+                            </span>
+                        </a>
+                        <ul class="navigation-sub-items">
+                            <li>
+                                <a href="#">
+                                    <span class="navigation-sub-item-text">My Apps</span>
+                                </a>
+                            </li>
+                        </ul>
+                    </li>
+                    <li class="background-color-mobile">
+                        <a href="#">
+                            <i class="navigation-item-icon fw fw-mobile"></i>
+                            <span class="navigation-item-text">Mobile Apps</span>
+                        </a>
+                    </li>
+                    <li class="background-color-site">
+                        <a href="#">
+                            <i class="navigation-item-icon fw fw-website"></i>
+                            <span class="navigation-item-text">
+                                Sites<i class="fw fw-down navigation-sub-items-toggle"></i>
+                            </span>
+                        </a>
+                        <ul class="navigation-sub-items" style="display: none;">
+                            <li>
+                                <a href="#">
+                                    <span class="navigation-sub-item-text">My Sites</span>
+                                </a>
+                            </li>
+                        </ul>
+                    </li>
+                </ul>
             </nav>
 
-            <div class="add-margin-top-3x hidden-xs hidden-sm">
+            <div class="add-margin-top-3x">
                 <div class="section-title">Tags</div>
                 <ul class="tags">
                     <li>Business</li>
@@ -162,94 +181,16 @@
                 </ul>
             </div>
 
-            <div class="add-margin-top-3x hidden-xs hidden-sm">
-                <div class="section-title">Recent Apps</div>
-                <ul class="recent-app-items">
-                    <li class="">
-                        <a href="/app/id">
-                            <div class="recent-app-item-thumbnail">
-                                <img class="" src="http://placehold.it/40x30.png" />
-                            </div>
-                            <div class="recent-app-item-summery">
-                                <h4 class="media-heading">App Name</h4>
-                                Admin
-                            </div>
-                        </a>
-                    </li>
-                    <li class="">
-                        <a href="/app/id">
-                            <div class="recent-app-item-thumbnail">
-                                <div style="background-color: #e67e22;"></div>
-                            </div>
-                            <div class="recent-app-item-summery">
-                                <h4 class="media-heading">App Name</h4>
-                                Admin
-                            </div>
-                        </a>
-                    </li>
-                    <li class="">
-                        <a href="/app/id">
-                            <div class="recent-app-item-thumbnail">
-                                <img class="" src="http://placehold.it/100x100.png" />
-                            </div>
-                            <div class="recent-app-item-summery">
-                                <h4 class="media-heading">App Name</h4>
-                                Admin
-                            </div>
-                        </a>
-                    </li>
-                    <li class="">
-                        <a href="/app/id">
-                            <div class="recent-app-item-thumbnail">
-                                <img class="" src="http://placehold.it/500x300.png" />
-                            </div>
-                            <div class="recent-app-item-summery">
-                                <h4 class="media-heading">Very Long App Name</h4>
-                                Very Long Provider Name
-                            </div>
-                        </a>
-                    </li>
-                    <li class="">
-                        <a href="/app/id">
-                            <div class="recent-app-item-thumbnail">
-                                <img class="" src="http://placehold.it/900x600.png" />
-                            </div>
-                            <div class="recent-app-item-summery">
-                                <h4 class="media-heading">App Name</h4>
-                                Admin
-                            </div>
-                        </a>
-                    </li>
-                </ul>
-            </div>
-
         </div>
 
         <!-- media body-->
         <div class="media-body">
             <!-- search bar -->
-            <nav class="search-bar navbar navbar-default">
-                <div class="search-box col-xs-12 col-sm-12 col-md-12 col-lg-6">
-                    <div class="input-group">
-                        <input type="text" class="search-field form-control" placeholder="Search for web apps" />
-
-                        <div class="input-group-btn">
-                            <button type="button" class="btn">
-                                <i class="fw fw-search"></i>
-                            </button>
-                            <button type="button" id="abc" class="btn dropdown-toggle search-by"
-                                    data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
-                                By Name <span class="caret"></span>
-                            </button>
-                            <ul class="dropdown-menu dropdown-menu-right dropdown-selectable search-by-dropdown"
-                                data-target="#abc">
-                                <li><a>By Name</a></li>
-                                <li><a>By Provider</a></li>
-                            </ul>
-                        </div>
-                    </div>
-                </div>
-            </nav>
+            <span class="hidden-md hidden-lg" style="">
+                <a id="left-column-toggle-btn" href="#" class="">
+                    <i class="fw fw-left-arrow"></i>
+                </a>
+            </span>
 
             <!-- page content -->
             <div class="container-fluid body-wrapper">
@@ -257,15 +198,6 @@
                 <div class="page-header">
                     <div class="pull-left">
                         <h3 class="page-title hidden-xs">Sites</h3>
-
-                        <div class="page-title-setting dropdown">
-                            <a href="#" class="dropdown-toggle" data-toggle="dropdown" title="Settings for this page">
-                                <i class="fw fw-settings fw-rotate-90">&nbsp;</i><span class="caret"></span>
-                            </a>
-                            <ul class="dropdown-menu" role="menu" aria-labelledby="menu1">
-                                <li><a href="#">Set this page as Home</a></li>
-                            </ul>
-                        </div>
                     </div>
                     <div class="sorting-options pull-right">
                         <div class="btn-group" role="group">
@@ -875,5 +807,6 @@
 
 <!--AppM theme related JS -->
 <script src="js/appm-styles.js"></script>
+<script src="js/appm-left-column.js"></script>
 </body>
 </html>

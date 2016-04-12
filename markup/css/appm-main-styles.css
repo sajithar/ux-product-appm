@@ -36,6 +36,10 @@ header .header-action:active {
 
 /**/
 /*========== BODY ==========*/
+.body-wrapper {
+    background-color: #EFEFEF;
+}
+
 .body-wrapper a:hover {
     text-decoration: none;
 }
@@ -49,6 +53,23 @@ header .header-action:active {
 /*=========== nav CLASS ========*/
 .actions-bar {
     background: #2c313b;
+    color: #ffffff;
+}
+
+.actions-bar .action {
+    margin: 0 15px 0 15px;
+    /*margin: 8px 8px 8px 8px;*/
+    /*border: none;*/
+    /*padding: 9px 10px 9px 10px;*/
+    /*display: inline-block;*/
+    line-height: 50px;
+}
+
+.actions-bar .action a:hover,
+.actions-bar .action a:focus,
+.actions-bar .action a:active,
+.actions-bar .action .active {
+    background: #4d5461;
 }
 
 .actions-bar .navbar-nav > li a {
@@ -59,7 +80,7 @@ header .header-action:active {
 .actions-bar .navbar-nav > li a:focus,
 .actions-bar .navbar-nav > li a:active {
     background: #4d5461;
-    color: #ffffff;
+    /*color: #ffffff;*/
 }
 
 .actions-bar .navbar-nav > .active > a,

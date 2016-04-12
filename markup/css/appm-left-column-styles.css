@@ -14,64 +14,108 @@
 ~ limitations under the License.
 */
 
-/*========== MEDIA ==========*/
-@media only screen and (min-width: 768px) {
-    .page-content-wrapper.fixed {
-        min-height: calc(100% - 130px);
-        max-height: calc(100% - 130px);
+@media (max-width: 767px) {
+    .left-column {
+        max-width: 0;
+        /*position: absolute;*/
+        /*top: 0;*/
+        /*left: -200px;*/
     }
 }
 
-.media {
-    margin-top: 0;
-}
-
-.media-left {
+.left-column {
     padding-right: 0;
+    z-index: 100;
+    overflow-y: auto;
+    -webkit-transition: all 0.5s ease;
+    -o-transition: all 0.5s ease;
+    transition: all 0.5s ease;
 }
 
-.media-body {
-    background-color: #EFEFEF;
+#left-column-toggle-btn > i{
+    width: 40px;
+    /* height: 40px; */
+    line-height: 35px;
+    float: left;
+    vertical-align: middle;
+    text-align: center;
+    margin-top: 10px;
+    margin-bottom: 10px;
+    background-color: #035A93;
+    color: #ffffff;
 }
-
 /**/
 /*========== NAVIGATION ==========*/
-nav.navigation {
-    background: #525252;
-    max-width: 200px;
+.navigation {
+    width: 200px;
 }
 
-nav.navigation, nav.navigation > a {
+.navigation .navigation-items {
     display: table;
-    color: #fff;
-    text-decoration: none;
+    position: relative;
+    list-style: none;
+    padding: 0;
+    margin: 0;
+}
+
+.navigation .navigation-items > li {
     font-size: 16px;
     font-weight: 100;
-    position: relative;
+    line-height: 40px;
 }
 
-nav.navigation > a > .icon {
-    vertical-align: middle;
+.navigation .navigation-items .navigation-item-icon {
     width: 40px;
     height: 40px;
+    line-height: 40px;
     float: left;
+    vertical-align: middle;
     text-align: center;
 }
 
-nav.navigation > a > .icon > i {
-    line-height: 100%;
-    font-size: 21px;
-    margin-top: 25%;
-}
-
-nav.navigation > a > .navigation-item {
+.navigation .navigation-items .navigation-item-text {
+    width: 160px;
+    height: 40px;
+    padding-left: 10px;
+    margin-left: 40px;
     text-align: left;
     vertical-align: middle;
+    display: table;
+}
+
+.navigation .navigation-items li.active .navigation-item-text,
+.navigation .navigation-items .navigation-item-text:hover,
+.navigation .navigation-items .navigation-item-text:active {
+    background-color: transparent;
+}
+
+.navigation .navigation-items .navigation-item-text > i {
+    float: none;
+    width: 30px;
+    display: table-cell;
+}
+
+.navigation .navigation-items .navigation-sub-items {
+    list-style: none;
+}
+
+.navigation .navigation-items .navigation-sub-items li.active .navigation-item-text,
+.navigation .navigation-items .navigation-sub-items .navigation-item-text:hover,
+.navigation .navigation-items .navigation-sub-items .navigation-item-text:active {
+    background-color: #626262;
+}
+
+.navigation .navigation-items .navigation-sub-items .navigation-sub-item-text {
     padding-left: 10px;
-    line-height: 40px;
-    float: left;
     width: 160px;
-    font-size: 14px;
+    display: table;
+}
+
+.navigation,
+.navigation .navigation-items .navigation-item-text,
+.navigation .navigation-items .navigation-sub-items {
+    color: #ffffff;
+    background-color: #525252;
 }
 
 .section-title {
@@ -133,6 +177,7 @@ nav.navigation > a > .navigation-item {
 .recent-app-items > li {
     padding: 6px 6px 6px 6px;
 }
+
 .recent-app-items .recent-app-item-thumbnail {
     width: 60px;
     height: 45px;
@@ -157,11 +202,25 @@ nav.navigation > a > .navigation-item {
     background-color: transparent;
     padding-left: 3px;
 
-    width:127px;
+    width: 127px;
 }
 
 .recent-app-items .recent-app-item-summery, .recent-app-items .recent-app-item-summery > h4 {
     overflow: hidden;
     text-overflow: ellipsis;
     white-space: nowrap;
+}
+
+/**/
+/* ========== COLORS ========= */
+.background-color-web {
+    background-color: #8e44ad;
+}
+
+.background-color-mobile {
+    background-color: #810847;
+}
+
+.background-color-site {
+    background-color: #1d7c42;
 }
